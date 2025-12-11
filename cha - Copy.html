@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Email_template</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background: #f7f8fa;
+      font-family: 'Segoe UI', Arial, sans-serif;
+    }
+    .email-container {
+      background: #fff;
+      max-width: 480px;
+      margin: 0 auto;
+      border-radius: 16px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+      border: 1px solid #e0e0e0;
+      overflow: hidden;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 24px;
+      background-color: #fff;
+    }
+    .logo {
+      height: 48px;
+      max-width: 200px;
+      object-fit: contain;
+      display: block;
+    }
+    .main-image {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+      max-height: 180px;
+    }
+    .content {
+      padding: 32px 24px 16px 24px;
+    }
+    h1 {
+      font-size: 2rem;
+      color: #222;
+      margin: 24px 0 8px 0;
+      font-weight: 700;
+    }
+    .subtitle {
+      color: #555;
+      font-size: 1.1rem;
+      margin-bottom: 24px;
+    }
+    .divider {
+      border: none;
+      border-top: 1.5px solid #e0e0e0;
+      margin: 24px 0;
+    }
+    .desc {
+      color: #222;
+      font-size: 1rem;
+      margin-bottom: 12px;
+    }
+    .desc strong {
+      font-weight: 700;
+    }
+    ul {
+      margin: 0 0 24px 18px;
+      color: #222;
+      font-size: 1rem;
+    }
+    ul li {
+      margin-bottom: 6px;
+    }
+    .partner-logos {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 24px;
+      padding: 0 16px;
+    }
+    .partner-logos img {
+      width: 100%;
+      max-width: 220px;
+      object-fit: contain;
+      background: #fff;
+      padding: 4px 8px;
+      border-radius: 6px;
+      border: 1px solid #f0f0f0;
+      display: block;
+    }
+    .cta-section {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+    .cta-section h2 {
+      color: #0057b8;
+      font-size: 1.1rem;
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+    .cta-button {
+      display: inline-block;
+      background: #0057b8;
+      color: #fff !important;
+      padding: 12px 32px;
+      border-radius: 24px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      margin-top: 12px;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .cta-button:hover {
+      background: #003e7e;
+    }
+    .contact {
+      text-align: center;
+      color: #222;
+      font-size: 1rem;
+      margin-top: 8px;
+    }
+    .contact strong {
+      display: block;
+      font-size: 1.05rem;
+      margin-bottom: 2px;
+    }
+    .visit-us {
+      text-align: center;
+      margin-top: 16px;
+    }
+    .visit-button {
+      display: inline-block;
+      background-color: #fff;
+      color: #0057b8;
+      border: 1.5px solid #0057b8;
+      padding: 10px 28px;
+      border-radius: 24px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: background 0.2s, color 0.2s;
+    }
+    .visit-button:hover {
+      background-color: #0057b8;
+      color: #fff;
+    }
+    .footer {
+      background: #fff;
+      text-align: center;
+      padding: 16px 24px;
+    }
+    .footer-divider {
+      border: none;
+      border-top: 1.5px solid #e0e0e0;
+      margin: 24px 0 16px 0;
+    }
+    .footer-logo {
+      object-fit: cover;
+      height: 40px;
+      margin-bottom: 12px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .footer-text {
+      color: #888;
+      font-size: 0.85rem;
+      margin-bottom: 4px;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 600px) {
+      .email-container {
+        border-radius: 0;
+        max-width: 100vw;
+      }
+      .content, .footer {
+        padding: 16px 12px;
+      }
+      .header {
+        flex-direction: column;
+        gap: 12px;
+        padding: 16px 12px;
+      }
+      .logo {
+        max-height: 40px;
+        width: auto;
+      }
+      .cta-button, .visit-button {
+        width: 100%;
+        max-width: 300px;
+      }
+      h1 {
+        font-size: 1.6rem;
+      }
+      .subtitle {
+        font-size: 1rem;
+      }
+      .partner-logos img {
+        max-width: 180px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="email-container">
+    <div class="header">
+      <img src="https://emailtemplate23.netlify.app/hplogo.png" alt="HP Logo" class="logo" />
+      <img src="https://emailtemplate23.netlify.app/innovaitve.png" alt="Innovative Logo" class="logo" />
+    </div>
+
+    <img src="https://emailtemplate23.netlify.app/hp_connect_centre.jpg" class="main-image" alt="Invitation" />
+
+    <div class="content">
+      <h1 style="color: #124ecc;">Try Before You Buy</h1>
+      <div class="subtitle">The Smarter Way to Choose Your Tech!</div>
+      <hr class="divider" />
+      <div class="desc">
+        We understand that <strong>the right technology</strong> can make all the difference for your business.<br /><br />
+        <strong>That’s why at the HP Connect Centre</strong>, you can now test-drive your preferred software and applications on HP devices before making a purchase.
+      </div>
+      <ul>
+        <li>Check compatibility with your business tools</li>
+        <li>Experience real-world performance</li>
+        <li>Make an informed investment</li>
+      </ul>
+      <div class="partner-logos">
+        <img src="https://emailtemplate23.netlify.app/HP_partner_logo.png" alt="Partner Logo" />
+      </div>
+      <div class="cta-section">
+        <h2>Visit us today and ensure your next device perfectly fits your business needs.</h2>
+        <a href="tel:+91 96997 66932" class="cta-button">Connect with HP expert</a>
+        <div class="contact">
+          <strong>Ms. Gayatri Shembekar</strong>
+          96997 66932
+        </div>
+        <div class="visit-us">
+          <a href="https://maps.app.goo.gl/Y5b8oAbryuN8JFjz5" class="visit-button">Visit Us</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <hr class="footer-divider" />
+      <img src="https://emailtemplate23.netlify.app/hplogo.png" class="footer-logo" alt="HP Logo" />
+      <div class="footer-text">
+        All materials on this email are for internal use only and are not intended to be shared with external resources or media without prior consent of HP Global Communications.
+      </div>
+      <div class="footer-text">HP Restricted – Privacy</div>
+    </div>
+  </div>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email_template</title>
+    <style>
+        * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+        body {
+            background: #f7f8fa;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .email-container {
+            background: #fff;
+            max-width: 480px;
+            margin: 0 auto;
+            border-radius: 16px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+            overflow: hidden;
+            border: 1px solid #e0e0e0;
+        }
+        .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  background-color: #fff;
+}
+
+.logo {
+  height: 48px;
+  max-width: 200px;
+  object-fit: cover;
+}
+
+        .header img {
+            height: 200px;
+            object-fit: contain;
+
+        }
+        .main-image {
+            width: 100%;
+            display: block;
+            object-fit: cover;
+            max-height: 180px;
+        }
+        .content {
+            padding: 32px 24px 16px 24px;
+        }
+        h1 {
+            font-size: 2rem;
+            color: #222;
+            margin: 24px 0 8px 0;
+            font-weight: 700;
+        }
+        .subtitle {
+            color: #555;
+            font-size: 1.1rem;
+            margin-bottom: 24px;
+        }
+        .divider {
+            border: none;
+            border-top: 1.5px solid #e0e0e0;
+            margin: 24px 0;
+        }
+        .desc {
+            color: #222;
+            font-size: 1rem;
+            margin-bottom: 12px;
+        }
+        .desc strong {
+            font-weight: 700;
+        }
+        ul {
+            margin: 0 0 24px 18px;
+            padding: 0;
+            color: #222;
+            font-size: 1rem;
+        }
+        ul li {
+            margin-bottom: 6px;
+        }
+        .partner-logos {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 24px;
+        }
+        .partner-logos img {
+           width: 100%;
+            object-fit: contain;
+            background: #fff;
+            padding: 4px 8px;
+            border-radius: 6px;
+            border: 1px solid #f0f0f0;
+        }
+        .cta-section {
+            text-align: center;
+            margin-bottom: 24px;
+        }
+        .cta-section h2 {
+            color: #0057b8;
+            font-size: 1.1rem;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+        .cta-button {
+            display: inline-block;
+            background: #0057b8;
+            color: #fff !important;
+            padding: 12px 32px;
+            border-radius: 24px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            margin: 12px 0 0 0;
+            border: none;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .cta-button:hover {
+            background: #003e7e;
+        }
+        .contact {
+            text-align: center;
+            color: #222;
+            font-size: 1rem;
+            margin-top: 8px;
+        }
+        .contact strong {
+            display: block;
+            font-size: 1.05rem;
+            margin-bottom: 2px;
+        }
+        .footer {
+            background: #fff;
+           
+            text-align: center;
+        }
+        .footer-divider {
+            border: none;
+            border-top: 1.5px solid #e0e0e0;
+            margin: 24px 0 16px 0;
+        }
+        .footer-logo {
+            object-fit: cover;
+            
+           
+
+        }
+        .visit-us {
+  text-align: center;
+  margin-top: 16px;
+}
+
+.visit-button {
+  display: inline-block;
+  background-color: #fff;
+  color: #0057b8;
+  border: 1.5px solid #0057b8;
+  padding: 10px 28px;
+  border-radius: 24px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background 0.2s, color 0.2s;
+}
+
+.visit-button:hover {
+  background-color: #0057b8;
+  color: #fff;
+}
+
+        .footer-text {
+            color: #888;
+            font-size: 0.85rem;
+            margin-bottom: 4px;
+        }
+        @media (max-width: 600px) {
+            .email-container {
+                border-radius: 0;
+                max-width: 100vw;
+            }
+            .content, .footer {
+                padding: 16px 8px;
+            }
+        }
+    </style>
+   
+</head>
+<body>
+    <div class="email-container">
+      <div class="header">
+  <img src="https://emailtemplate23.netlify.app/hplogo.png" alt="HP Logo" class="logo">
+  <img src="https://emailtemplate23.netlify.app/innovaitve.png" alt="Innovative Logo" class="logo">
+</div>
+
+        <img src="https://emailtemplate23.netlify.app/hp_Invitation.png" class="main-image" alt="Invitation">
+        <div class="content">
+            <h1 style="color: #124ecc;">Try Before You Buy</h1>
+            <div class="subtitle">The Smarter Way to Choose Your Tech!</div>
+            <hr class="divider">
+            <div class="desc">
+                We understand that <strong>the right technology</strong> can make all the difference for your business.<br><br>
+                <strong>That’s why at the HP Connect Centre</strong>, you can now test-drive your preferred software and applications on HP devices before making a purchase.
+            </div>
+            <ul>
+                <li>Check compatibility with your business tools</li>
+                <li>Experience real-world performance</li>
+                <li>Make an informed investment</li>
+            </ul>
+            <div class="partner-logos">
+            <img src="https://emailtemplate23.netlify.app/HP_partner_logo.png" alt="">  
+            </div>
+            <div class="cta-section">
+                <h2>Visit us today and ensure your next device perfectly fits your business needs.</h2>
+                <a  href="tel:+91 96997 66932" class="cta-button">Connect with HP expert</a>
+                <div class="contact">
+                    <strong>Ms. Gayatri Shembekar</strong>
+                    96997 66932
+                </div>
+              <div class="visit-us">
+  <a href="https://maps.app.goo.gl/Y5b8oAbryuN8JFjz5" class="visit-button">Visit Us</a>
+</div>
+
+        </div>
+        <div class="footer">
+            <hr class="footer-divider">
+            <img src="https://emailtemplate23.netlify.app/hplogo.png" class="footer-logo" alt="HP Logo">
+            <div class="footer-text">
+                All materials on this email are for internal use only and are not intended to be shared with external resources or media without prior consent of HP Global Communications.
+            </div>
+            <div class="footer-text">HP Restricted – Privacy</div>
+        </div>
+    </div>
+</body>
+</html>
